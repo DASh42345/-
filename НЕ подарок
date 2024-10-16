@@ -1,0 +1,43 @@
+import turtle # черепашка
+
+pen = turtle.Turtle() # карандашик для надписи
+pen.hideturtle() # прячет карандашик
+
+def draw_heart(): # сердечко (там что-то на умном, я сам не особо разбираюсь)
+    turtle.penup()
+    turtle.goto(0,0)
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.color("red", "pink")
+    turtle.left(140)
+    turtle.forward(180)
+    turtle.circle( -90, 200)
+    turtle.setheading(60)
+    turtle.circle( -90, 200)
+    turtle.forward(180)
+    turtle.end_fill()
+    
+
+def txt(): # надпись
+
+    pen.up() 
+
+    pen.setpos(-140, 175) # где начать писать надпись 
+
+    pen.down() 
+
+    pen.color('red') 
+
+    pen.write("Люблю тебя как прогу...", font=( 
+        "Verdana", 16, "bold")) # текст, шрифт, размер шрифта...
+    
+    pen.up() 
+    pen.setpos(-125, 150)
+    pen.write("может даже чутьчуть сильнее)", font=( 
+        "Verdana", 11, "bold")) # текст, шрифт, размер шрифта...    
+    
+    turtle.exitonclick()
+
+    
+draw_heart()
+txt()
